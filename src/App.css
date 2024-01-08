@@ -1,38 +1,61 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* App.css */
+.app-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100vh;
+  opacity: 1;
+  transition: opacity 2s ease-in-out;
 }
 
-.App-link {
-  color: #61dafb;
+.app-container.fade-out {
+  opacity: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.app-container.fade-in {
+  opacity: 1;
+}
+
+.back-video{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -2;
+}
+
+@media (min-aspect-ratio: 16/9){
+  back-video{
+    width: 100%;
+    height: auto;
   }
 }
+
+@media (max-aspect-ratio: 16/9){
+  back-video{
+    width: auto;
+    height: 100%;
+  }
+}
+
+.back-overlay{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0.2;
+}
+
+@media (min-aspect-ratio: 16/9){
+  back-overlay{
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9){
+  back-overlay{
+    width: auto;
+    height: 100%;
+  }
+}
+
