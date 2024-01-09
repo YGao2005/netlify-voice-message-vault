@@ -64,6 +64,8 @@ const audioMappings = {
   TOUCH: '/assets/audios/TOUCH.m4a',
   WORRY: '/assets/audios/WORRY.m4a',
   SELFLESS: '/assets/audios/SELFLESS.m4a',
+  SENSE: '/assets/audios/SENSE.m4a',
+  
 };
 
 const App = () => {
